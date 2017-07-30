@@ -6,7 +6,7 @@ int main(int argc, char**argv)
 
 	(void)argc;
 	(void)argv;
-	log_t hnd = module_log_init("TEST", LOG_INFO, NULL, NULL);
+	log_t hnd = module_log_init("TEST", LOG_INFO, 8, NULL, NULL);
 	char*p=NULL;
 	LOG(&p, hnd, LOG_WARN, "ajksj\n");
 	printf("%s",p);
