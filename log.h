@@ -88,7 +88,7 @@ typedef int (*log_outputv_callback_t)(log_t, log_level_t level,
  * log_outputv_callback:  @log_outputv_callback_t;  custom function for module_log_output, should be NULL, if usr NOT instance log_outputv_callback_t.
  * log_outputvs_callback: @log_outputvs_callback_t; custom function for module_log_output, should be NULL, if usr NOT instance log_outputvs_callback_t.
  * ******************************************************************************************************************************************/
- log_t module_log_init(const char *module, log_level_t level, log_outputv_callback_t log_outputv_callback, log_outputvs_callback_t log_outputvs_callback);
+ log_t module_log_init(const char *module, log_level_t level, int houroffset, log_outputv_callback_t log_outputv_callback, log_outputvs_callback_t log_outputvs_callback);
 
 /* after module_log_init, you must call it for destroy the log hnd, when you are sure that do not use the log again.*/
 log_t module_log_destroy(log_t log);
